@@ -2,3 +2,4 @@
 target/
 image/
 *.iml
+*.DS_Store
