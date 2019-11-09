@@ -20,7 +20,7 @@
 <body>
     <h3>Custom Login Page</h3>
 
-    <form:form action="${pageContext.request.contextPath}/authenticateTheUser" method="POST">
+    <form:form action="${pageContext.request.contextPath}/authenticateTheUser" method="post">
         
         <c:if test="${param.error != null}">
             <i class="failed">Sorry! You entered wrong credentials.</i>
