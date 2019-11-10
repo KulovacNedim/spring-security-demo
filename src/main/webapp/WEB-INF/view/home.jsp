@@ -1,4 +1,4 @@
-/<%--
+<%--
   Created by IntelliJ IDEA.
   User: Nedim
   Date: 09.11.19.
@@ -26,16 +26,18 @@
     <br>
     <hr>
     <br>
-    <p>
-        <a href="${pageContext.request.contextPath}/leaders">Leadership meeting</a>
-    </p>
+    <security:authorize access="hasRole('MANAGER')">
+        <p>
+            <a href="${pageContext.request.contextPath}/leaders">Leadership meeting</a>
+        </p>
+    </security:authorize>
     <br>
-    <p>
-        <a href="${pageContext.request.contextPath}/systems">IT Systems meeting</a>
-    </p>
+    <security:authorize access="hasRole('ADMIN')">
+        <p>
+            <a href="${pageContext.request.contextPath}/systems">IT Systems meeting</a>
+        </p>
+    </security:authorize>
     <br>
-    <hr>
-
     <form:form action="${pageContext.request.contextPath}/logout" method="post">
         <input type="submit" value="Logout" />
     </form:form>
