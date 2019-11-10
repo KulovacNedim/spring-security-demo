@@ -25,6 +25,16 @@
     </p>
     <br>
     <hr>
+    <br>
+    <p>
+        <a href="${pageContext.request.contextPath}/leaders">Leadership meeting</a>
+    </p>
+    <br>
+    <p>
+        <a href="${pageContext.request.contextPath}/systems">IT Systems meeting</a>
+    </p>
+    <br>
+    <hr>
 
     <form:form action="${pageContext.request.contextPath}/logout" method="post">
         <input type="submit" value="Logout" />
